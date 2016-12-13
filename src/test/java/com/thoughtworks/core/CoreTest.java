@@ -6,7 +6,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * Created by hliang on 13/12/2016.
  */
-public class ConvertTest {
+public class CoreTest {
     @Test
     public void should_return_1_given_1 () {
         //given
@@ -42,5 +42,14 @@ public class ConvertTest {
         String actualValue = new Core().convertToNumberDescription(number);
         //then
         assertThat(actualValue).isEqualTo("FizzBuzz");
+    }
+    @Test
+    public void should_return_16_given_16 () {
+        //given
+        int number = 16;
+        //when
+        String actualValue = new Core().convertToNumberDescription(number);
+        //then
+        assertThat(actualValue).isEqualTo("16");
     }
 }
