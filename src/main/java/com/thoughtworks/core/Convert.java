@@ -10,10 +10,20 @@ public class Convert {
         core = p0;
     }
 
-    public String[] convertToNumberDescriptions(int i) {
-        if (i == 1) {
-            return new String[]{core.convertToNumberDescription(i)};
+    public String[] convertToNumberDescriptions(int max) {
+        String[] res = new String[max];
+        for (int i = 0; i < max; i++) {
+            res[i] = core.convertToNumberDescription(i+1);
         }
-        return new String[0];
+        return  res;
+    }
+
+    public static void main(String[] args) {
+        Core core = new Core();
+        Convert convert = new Convert(core);
+        String[] numberDescriptions = convert.convertToNumberDescriptions(100);
+        for (String numberDescription : numberDescriptions) {
+            System.out.println(numberDescription);
+        }
     }
 }
