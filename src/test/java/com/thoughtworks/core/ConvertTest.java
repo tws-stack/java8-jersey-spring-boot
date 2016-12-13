@@ -16,4 +16,13 @@ public class ConvertTest {
         //then
         assertThat(actualValue).isEqualTo("1");
     }
+    @Test
+    public void should_return_Fizz_given_3 () {
+        //given
+        int number = 3;
+        //when
+        String actualValue = new Core().convertToNumberDescription(number);
+        //then
+        assertThat(actualValue).isEqualTo("Fizz");
+    }
 }
