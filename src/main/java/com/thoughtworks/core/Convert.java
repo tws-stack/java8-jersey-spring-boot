@@ -11,6 +11,9 @@ public class Convert {
     }
 
     public String[] convertToNumberDescriptions(int i) {
+        if (i == 1) {
+            return new String[]{core.convertToNumberDescription(i)};
+        }
         return new String[0];
     }
 }
