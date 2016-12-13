@@ -10,7 +10,7 @@ public class Convert {
         core = p0;
     }
 
-    public String[] convertToNumberDescriptions() {
+    public String[] convertToNumberDescriptions(int i) {
         return new String[0];
     }
 }

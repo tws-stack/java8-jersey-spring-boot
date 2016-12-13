@@ -14,8 +14,18 @@ public class ConvertTest {
         Core core = new Core();
         Convert convert = new Convert(core);
         //when
-        String[] result = convert.convertToNumberDescriptions();
+        String[] result = convert.convertToNumberDescriptions(0);
         //then
         assertThat(result).isEqualTo(new String[0]);
+    }
+    @Test
+    public void should_return_array1_given_1 () {
+        //given
+        Core core = new Core();
+        Convert convert = new Convert(core);
+        //when
+        String[] result = convert.convertToNumberDescriptions(1);
+        //then
+        assertThat(result).isEqualTo(new String[]{"1"});
     }
 }
