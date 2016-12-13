@@ -5,6 +5,9 @@ package com.thoughtworks.core;
  */
 public class Core {
     public String convertToNumberDescription(int number) {
+        if (number % 3 == 0) {
+            return "Fizz";
+        }
         return "1";
     }
 }
