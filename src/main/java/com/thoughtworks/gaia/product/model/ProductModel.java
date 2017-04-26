@@ -16,6 +16,9 @@ public class ProductModel extends IdBaseModel {
     @Column(name = "time_created", nullable = false, updatable = false)
     private Date timeCreated;
 
+    @Column(name = "is_deleted", nullable = false)
+    private boolean isDeleted;
+
     public String getName() {
         return name;
     }
@@ -30,5 +33,13 @@ public class ProductModel extends IdBaseModel {
 
     public void setTimeCreated(Date timeCreated) {
         this.timeCreated = timeCreated;
+    }
+
+    public boolean isDeleted() {
+        return isDeleted;
+    }
+
+    public void setDeleted(boolean deleted) {
+        isDeleted = deleted;
     }
 }

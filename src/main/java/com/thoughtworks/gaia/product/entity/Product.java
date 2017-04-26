@@ -9,6 +9,12 @@ public class Product {
 
     private Date timeCreated;
 
+    private boolean isDeleted;
+
+    public boolean isDeleted() {
+        return isDeleted;
+    }
+
     public Long getId() {
         return id;
     }
