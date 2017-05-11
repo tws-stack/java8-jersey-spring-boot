@@ -52,7 +52,6 @@ public class ProductEndPoint {
     @POST
     public Response createProduct(Product product) {
         Product productCreated = productService.create(product);
-        ;
         return Response.created(uriInfo.getRequestUriBuilder().build("/" + productCreated.getId())).entity(productCreated).build();
     }
 
